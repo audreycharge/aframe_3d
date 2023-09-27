@@ -1,14 +1,28 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>A-Frame Picture Frame</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- the room-->
+    <a-box position="0 2 0" scale="4 4 4" color="#aaa"></a-box>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#333"></a-plane>
+
+    <!-- creating picture frame -->
+    <a-entity position="0 2.5 -2">
+      <!-- actual frame -->
+      <a-box width="2" height="3" depth="0.1" color="#8B4513"></a-box>
+      
+      <!-- insert the picture/design here -->
+      <a-plane position="0 0 0.05" width="1.8" height="2.8" material="src: your-image-url.jpg"></a-plane>
+    </a-entity>
+
+    <!-- camera and controls -->
+    <a-camera position="0 1.6 0"></a-camera>
+    <a-entity laser-controls></a-entity>
+  </a-scene>
+</body>
 </html>
