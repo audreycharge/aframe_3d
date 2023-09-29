@@ -1,39 +1,120 @@
 <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-  </head>
-  <style>
-    :root {
-        --teal: teal;
-    }
-  </style>
-  <body>
-    <a-scene>
-      <!-- eye -->
-      <a-sphere position="0.3 2.5 -4.1" radius="0.02" color="#641900" scale=" 1 3 1" rotation="0 0 -30"></a-sphere>
-      <a-sphere position="0.3 2.5 -4.2" radius="0.2" color="#EDDC63" scale=" 0.5 0.7 0.5" rotation="0 0 -30"></a-sphere>
-      <!-- head -->
-      <a-sphere position="0.45 2.7 -4.7" radius="0.5" color="#59B46B"></a-sphere>
-      <a-sphere position="-0.4 2 -4.7" radius="0.5" color="#59B46B" scale="0.4 0.9 0.4" rotation="0 0 -20"></a-sphere>
-      <a-cylinder position="0.3 1.3 -4.7" radius="0.3" width="0.5" height="1.5" color="#59B46B" rotation="0 0 -25"></a-cylinder>
-      <a-cylinder position="0.8 1.3 -4.9" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
-      <a-cylinder position="-0.5 1.3 -4.5" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -45"></a-cylinder>
-      <a-cylinder position="-0.5 0.2 -4.9" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -25"></a-cylinder>
-      <a-cylinder position="0.8 0.2 -4.5" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
-      <a-sky color="#F6A20B"></a-sky>
-        <!-- the room-->
-        <a-box position="-20 5 -3" color="#454313" depth="20" height="20" width="5"></a-box>
-        <a-box position="20 5 -3" color="#454313" depth="20" height="20" width="5"></a-box>
-        <a-assets> <img id="floorpng.jpg"></a-assets>
-        <a-plane position="0 -5 -3" rotation="-90 0 0" width="35" height="20" color="#22811f" ></a-plane>
-        <a-plane position="0 5 -13" color="#00d2ff" height="20" width="40"></a-plane>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<style>
+  :root {
+    --teal: teal;
+  }
+</style>
+<body>
+  <a-scene>
+    <!-- Image for inspiration -->
+    <!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.designcafe.com%2Fblog%2Fliving-room-interiors%2Fwall-mounted-tv-cabinet-designs%2F&psig=AOvVaw2nUPMgy9hAqZmG7_d5_Rrb&ust=1695877314656000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCMj_rbmByoEDFQAAAAAdAAAAABAG -->
+    <a-sky color="#ECECEC"></a-sky>
+    <!-- Set up the camera and lighting -->
+    <a-entity position="0 1.6 0">
+      <a-camera></a-camera>
+      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+      <a-light type="directional" position="2 4 3" intensity="0.8"></a-light>
+    </a-entity>
 
-        <!-- creating picture frame -->
-        <a-entity position="0 2.5 -4.99">
-        <!-- actual frame -->
-        <a-box position="0 -1 0" width="5" height="6" depth="0.05" color="#8B4513"></a-box>
+    <!-- Lamp Base -->
+    <a-cylinder
+      position="2.5 -1 -4"
+      radius="0.15"
+      height="0.6"
+      color="gray"
+      shadow="cast: true"
+    ></a-cylinder>
 
-        <!-- camera and controls -->
-        <a-camera position="0 1.6 0"></a-camera>
-        <a-entity laser-controls></a-entity>
-    </a-scene>
-  </body>
+    <!-- Lamp Stand -->
+    <a-cylinder
+      position="2.5 0.8 -4"
+      radius="0.1"
+      height="3"
+      color="gray"
+      shadow="cast: true"
+    ></a-cylinder>
+
+    <!-- Lamp Shade -->
+    <a-cone
+      position="2.5 2.4 -4"
+      radius-bottom="0.4"
+      radius-top="0.1"
+      height="0.5"
+      color="white"
+      shadow="cast: true; receive: true"
+    ></a-cone>
+
+    <!-- Light Source -->
+    <a-light
+      type="point"
+      position="2.5 2.45 -4"
+      intensity="2"
+      distance="4"
+      decay="2"
+      castShadow="true"
+    ></a-light>
+
+    <!-- Display the furniture -->
+    <!-- Table -->
+    <a-entity
+      geometry="primitive: box; width: 2; height: 0.1; depth: 1.2"
+      material="color: #8B4513"
+      position="0 0.8 -3"
+    ></a-entity>
+
+    <!-- Chairs -->
+    <a-entity
+      geometry="primitive: box; width: 0.4; height: 0.8; depth: 0.4"
+      material="color: #FFD700"
+      position="-0.8 0.4 -2.6"
+    ></a-entity>
+
+    <a-entity
+      geometry="primitive: box; width: 0.4; height: 0.8; depth: 0.4"
+      material="color: #FFD700"
+      position="0.8 0.4 -2.6"
+    ></a-entity>
+
+    <!-- Bookshelf -->
+    <a-entity
+      geometry="primitive: box; width: 1; height: 2; depth: 0.2"
+      material="color: #808080"
+      position="-2 1 -3"
+    ></a-entity>
+
+    <!-- Books on the bookshelf -->
+    <a-entity
+      geometry="primitive: box; width: 0.8; height: 0.1; depth: 0.4"
+      material="color: #FFD700"
+      position="-2 1.1 -3"
+    ></a-entity>
+
+    <a-entity
+      geometry="primitive: box; width: 0.8; height: 0.1; depth: 0.4"
+      material="color: #FFD700"
+      position="-2 1.3 -3"
+    ></a-entity>
+
+    <a-entity
+      geometry="primitive: box; width: 0.8; height: 0.1; depth: 0.4"
+      material="color: #FFD700"
+      position="-2 1.5 -3"
+    ></a-entity>
+
+    <!-- TV Stand -->
+    <a-entity
+      geometry="primitive: box; width: 1.5; height: 0.6; depth: 0.8"
+      material="color: #000000"
+      position="0 1 -3"
+    ></a-entity>
+
+    <!-- Television -->
+    <a-entity
+      geometry="primitive: box; width: 1.2; height: 0.8; depth: 0.1"
+      material="color: #0000FF"
+      position="0 2 -2.5"
+    ></a-entity>
+  </a-scene>
+</body>
