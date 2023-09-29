@@ -1,0 +1,38 @@
+<head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <style>
+    :root {
+        --teal: teal;
+    }
+  </style>
+  <body>
+    <a-scene>
+      <!-- eye -->
+      <a-sphere position="0 1.9 -1.5" radius="0.02" color="#641900" scale=" 0.5 1.5 0.5" rotation="0 0 -30"></a-sphere>
+      <a-sphere position="0 2 -2" radius="0.2" color="#EDDC63" scale=" 0.5 0.7 0.5" rotation="0 0 -30"></a-sphere>
+      <!-- head -->
+      <a-sphere position="0.15 2.7 -5" radius="0.75" color="#59B46B"></a-sphere>
+      <a-sphere position="-1 1.8 -5" radius="0.75" color="#59B46B" scale="0.4 0.9 0.4" rotation="0 0 -20"></a-sphere>
+      <a-cylinder position="0.7 0.75 -5" radius="0.5" width="1" height="2.5" color="#59B46B" rotation="0 0 -25"></a-cylinder>
+      <a-sky color="#F6A20B"></a-sky>
+        <!-- the room-->
+        <a-box position="0 2 0" scale="4 4 4" color="#aaa"></a-box>
+        <a-assets> <img id="floorping.jpg"></a-assets>
+        <a-plane position="0 -0.57 0" rotation="-90 0 0" width="10" height="10" color="#3553" src="#floorpng"></a-plane>
+
+
+        <!-- creating picture frame -->
+        <a-entity position="0 2.5 -4.99">
+        <!-- actual frame -->
+        <a-box width="2" height="3" depth="0.1" color="#8B4513"></a-box>
+
+        <!-- insert the model here? -->
+        <a-plane position="0 0 0.05" width="1.8" height="2.8"></a-plane>
+        </a-entity>
+
+        <!-- camera and controls -->
+        <a-camera position="0 1.6 0"></a-camera>
+        <a-entity laser-controls></a-entity>
+    </a-scene>
+  </body>
