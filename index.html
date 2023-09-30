@@ -9,31 +9,28 @@
   <body>
     <a-scene>
       <!-- eye -->
-      <a-sphere position="0.3 2.5 -4.4" radius="0.02" color="#641900" scale=" 1 3 1" rotation="0 0 -30"></a-sphere>
-      <a-sphere position="0.3 2.5 -4.5" radius="0.2" color="#EDDC63" scale=" 0.5 0.7 0.5" rotation="0 0 -30"></a-sphere>
+      <a-sphere position="0.3 2.5 -4.1" radius="0.02" color="#641900" scale=" 1 3 1" rotation="0 0 -30"></a-sphere>
+      <a-sphere position="0.3 2.5 -4.2" radius="0.2" color="#EDDC63" scale=" 0.5 0.7 0.5" rotation="0 0 -30"></a-sphere>
       <!-- head -->
-      <a-sphere position="0.45 2.7 -5" radius="0.5" color="#59B46B"></a-sphere>
-      <a-sphere position="-0.4 2 -5" radius="0.5" color="#59B46B" scale="0.4 0.9 0.4" rotation="0 0 -20"></a-sphere>
-      <a-cylinder position="0.3 1.3 -5" radius="0.3" width="0.5" height="1.5" color="#59B46B" rotation="0 0 -25"></a-cylinder>
-      <a-cylinder position="0.8 1.3 -5.2" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
-      <a-cylinder position="-0.5 1.3 -4.8" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -45"></a-cylinder>
-      <a-cylinder position="-0.5 0.2 -5.2" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -25"></a-cylinder>
-      <a-cylinder position="0.8 0.2 -4.8" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
+      <a-sphere position="0.45 2.7 -4.7" radius="0.5" color="#59B46B"></a-sphere>
+      <a-sphere position="-0.4 2 -4.7" radius="0.5" color="#59B46B" scale="0.4 0.9 0.4" rotation="0 0 -20"></a-sphere>
+      <a-cylinder position="0.3 1.3 -4.7" radius="0.3" width="0.5" height="1.5" color="#59B46B" rotation="0 0 -25"></a-cylinder>
+      <a-cylinder position="0.8 1.3 -4.9" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
+      <a-cylinder position="-0.5 1.3 -4.5" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -45"></a-cylinder>
+      <a-cylinder position="-0.5 0.2 -4.9" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 -25"></a-cylinder>
+      <a-cylinder position="0.8 0.2 -4.5" radius="0.2" width="0.5" height="2" color="#59B46B" rotation="0 0 25"></a-cylinder>
       <a-sky color="#F6A20B"></a-sky>
         <!-- the room-->
-        <a-box position="0 2 0" scale="4 4 4" color="#aaa"></a-box>
-        <a-assets> <img id="floorping.jpg"></a-assets>
-        <a-plane position="0 -0.57 0" rotation="-90 0 0" width="10" height="10" color="#3553" src="#floorpng"></a-plane>
-
+        <a-box position="-20 5 -3" color="#454313" depth="20" height="20" width="5"></a-box>
+        <a-box position="20 5 -3" color="#454313" depth="20" height="20" width="5"></a-box>
+        <a-assets> <img id="floorpng.jpg"></a-assets>
+        <a-plane position="0 -5 -3" rotation="-90 0 0" width="35" height="20" color="#22811f" ></a-plane>
+        <a-plane position="0 5 -13" color="#00d2ff" height="20" width="40"></a-plane>
 
         <!-- creating picture frame -->
         <a-entity position="0 2.5 -4.99">
         <!-- actual frame -->
-        <a-box width="2" height="3" depth="0.1" color="#8B4513"></a-box>
-
-        <!-- insert the model here? -->
-        <a-plane position="0 0 0.05" width="1.8" height="2.8"></a-plane>
-        </a-entity>
+        <a-box position="0 -1 0" width="5" height="6" depth="0.05" color="#8B4513"></a-box>
 
         <!-- camera and controls -->
         <a-camera position="0 1.6 0"></a-camera>
